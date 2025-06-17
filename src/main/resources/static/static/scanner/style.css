@@ -21,13 +21,13 @@ h1 {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #1f2937; /* cinza-800 */
+    color: #1f2937; 
 }
 
 .info {
     text-align: center;
     margin-bottom: 1rem;
-    color: #4b5563; /* cinza-600 */
+    color: #4b5563; 
 }
 
 .scan-area {
@@ -35,25 +35,27 @@ h1 {
     padding: 2rem;
     text-align: center;
     border-radius: 10px;
-    color: #6b7280; /* cinza-500 */
+    color: #6b7280; 
     font-style: italic;
     margin-bottom: 1rem;
 }
 
 label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-top: 0.40rem;
+    margin-bottom: 0.20rem;
+    padding: 0.20rem;
     font-weight: bold;
-    color: #374151; /* cinza-700 */
+    color: #374151; 
 }
 
 input[type="text"] {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #d1d5db; /* cinza-300 */
+    padding: 0.80rem;
+    border: 1px solid #d1d5db; 
     border-radius: 0.5rem;
-    background-color: #f9fafb; /* cinza-50 */
-    color: #374151; /* cinza-700 */
+    background-color: #f9fafb; 
+    color: #374151; 
     font-size: 1rem;
 }
 
@@ -62,7 +64,7 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: #facc15; /* amarelo-400 */
+    background-color: #facc15; 
     color: #000000;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -73,7 +75,7 @@ button {
 }
 
 button:hover {
-    background-color: #f59e0b; /* amarelo-500 */
+    background-color: #f59e0b; 
 }
 
 .imagem {
