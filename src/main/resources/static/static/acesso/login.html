@@ -12,7 +12,7 @@
     <img src="../acesso/imagens/Universidade_Franciscana_logo-removebg-preview%20(2).png" alt="Logo UFN" class="mx-auto mb-6 w-40" />
     <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Entrar na Conta</h2>
 
-    <form class="space-y-5">
+    <form class="space-y-5" id="loginForm">
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
         <input type="email" id="email" name="email" required
@@ -42,5 +42,13 @@
       <a href="cadastro.html" class="text-yellow-500 hover:underline">Cadastre-se</a>
     </p>
   </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // Por enquanto, simula o login e redireciona
+      window.location.href = "scanner/index.html";
+    });
+  </script>
 </body>
 </html>
