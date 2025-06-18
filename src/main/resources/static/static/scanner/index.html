@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leitura de Código de Barras - Portaria UFN</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leitura de Código de Barras - Portaria UFN</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="container relative">
+
+    <!-- Flechinha de voltar ao login (interna) -->
+    <a href="../acesso/login.html" title="Voltar"
+       style="position: absolute; top: 1rem; left: 1rem; font-size: 1.2rem; color: #15d8fa; text-decoration: none;">
+      🔙
+    </a>
 
     <img class="imagem" src="../scanner/imagens/Universidade_Franciscana_logo-removebg-preview.png" alt="Logo UFN">
+
+    <!-- Botões de navegação -->
+    <div style="margin-top: 0.5rem; margin-bottom: 0.5rem; text-align: center;">
+      <button onclick="window.location.href='cadastro_item.html'" style="display: inline-block; margin: 0 0.5rem;">
+        ➕ Cadastrar Item
+      </button>
+
+      <button onclick="window.location.href='cadastro_usuario.html'" style="display: inline-block; margin: 0 0.5rem;">
+        👤 Cadastrar Usuário
+      </button>
+    </div>
 
     <h1>Leitura de Código de Barras</h1>
     <p class="info">Aponte o leitor para o código do <strong>item</strong> e do <strong>usuário</strong>.</p>
@@ -32,22 +49,24 @@
     </p>
   </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const agora = new Date();
-    const formatado = agora.toLocaleString("pt-BR");
-    document.getElementById("dataHora").value = formatado;
-  }); 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const agora = new Date();
+      const formatado = agora.toLocaleString("pt-BR");
+      document.getElementById("dataHora").value = formatado;
+    });
 
-  function confirmarMovimentacao() {
-    const usuario = document.getElementById("codigoUsuario").value.trim();
-    const item = document.getElementById("codigoItem").value.trim();
+    function confirmarMovimentacao() {
+      const usuario = document.getElementById("codigoUsuario").value.trim();
+      const item = document.getElementById("codigoItem").value.trim();
 
-    if (!usuario || !item) {
-      alert("Preencha os dois campos: usuário e item.");
-      return;
+      if (!usuario || !item) {
+        alert("Preencha os dois campos: usuário e item.");
+        return;
+      }
+
+      document.getElementById("feedback").style.display = "block";
     }
-
-    document.getElementById("feedback").style.display = "block";
-  }
-</script>
+  </script>
+</body>
+</html>
